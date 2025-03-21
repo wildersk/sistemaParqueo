@@ -1,0 +1,33 @@
+/* src/styles.css */
+body {
+    font-family: Arial, sans-serif;
+    
+  }
+  
+  h1 {
+    text-align: center;
+    background-color:rgb(0, 65, 109);
+  }
+  
+  .parking-grid {
+    display: grid;
+    background-color: rgb(0, 65, 109);
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 25px;
+  }
+  
+  .parking-slot {
+    border: 1px solid #d80b0b;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+  }
+  
+  .parking-slot h3 {
+    margin: 0;
+  }
+  
+  .parking-slot p {
+    margin: 5px 0 0;
+  }
