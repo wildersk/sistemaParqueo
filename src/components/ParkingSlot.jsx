@@ -1,13 +1,21 @@
 import React from 'react';
 
-const ParkingSlot = ({ parking, onReserve }) => {
+const ParkingSlot = ({ parking }) => {
+  const parkingStyle = {
+    backgroundColor: parking.estado === 1 ? 'green' : 'red',
+    color: 'white',
+    padding: '10px',
+    margin: '5px',
+    borderRadius: '5px',
+    textAlign: 'center',
+    minWidth: '120px'
+  };
+
   return (
-    <div className="parking-slot">
-      <h3>Parqueo {parking.number}</h3>
-      <p>Estado: {parking.isAvailable ? 'Disponible' : 'Reservado'} Seccion A</p>
-      {parking.isAvailable && (
-        <button onClick={() => onReserve(parking.id)}>Reservar</button>
-      )}
+    <div style={parkingStyle}>
+      <h3>Parqueo {parking.numero}</h3>
+      <p>Sección: {parking.seccion}</p>
+      <p>Estado: {parking.estado === 1 ? 'Disponible' : 'Reservado'}</p>
     </div>
   );
 };
